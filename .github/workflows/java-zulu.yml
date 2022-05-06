@@ -9,6 +9,7 @@ on:
       - main
     paths:
       - java/zulu/**
+      - .github/workflows/java-zulu.yml
 jobs:
   push:
     name: "java:zulu_${{ matrix.tag }}"
