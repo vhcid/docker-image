@@ -41,4 +41,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/vhcid/java:${{ matrix.tag }}
+            ghcr.io/vhcid/eggs:java_${{ matrix.tag }}
