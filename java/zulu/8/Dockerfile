@@ -14,7 +14,7 @@ RUN curl -O https://cdn.azul.com/zulu/bin/zulu-repo_1.0.0-3_all.deb
 RUN apt-get -y install ./zulu-repo_1.0.0-3_all.deb
 RUN apt-get -y update
 
-RUN sudo apt-get -y install zulu8-jdk-headless
+RUN apt-get -y install zulu8-jdk-headless
 
 USER container
 ENV USER=container WORKDIR=/home/container
