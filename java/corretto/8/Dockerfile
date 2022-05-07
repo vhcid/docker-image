@@ -8,7 +8,7 @@ RUN apt-get -y update
 RUN apt-get -y upgrade
 RUN apt-get install -y curl ca-certificates openssl git tar sqlite3 fontconfig tzdata iproute2 libfreetype6 wget apt-transport-https gnupg2 apt-utils software-properties-common procps
 
-RUN wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add - 
+RUN wget -O- https://apt.corretto.aws/corretto.key | apt-key add - 
 RUN add-apt-repository 'deb https://apt.corretto.aws stable main'
 RUN apt-get -y update
 RUN apt-get -y upgrade
