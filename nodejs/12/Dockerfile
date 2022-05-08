@@ -1,4 +1,4 @@
-FROM --platform=$TARGETOS/$TARGETARCH node:12-bulleye-slim
+FROM --platform=$TARGETOS/$TARGETARCH node:12-bulleyes-slim
 
 LABEL author="andhra21231" maintainer="support@pelajar.social"
 
