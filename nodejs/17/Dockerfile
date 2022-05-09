@@ -2,11 +2,11 @@ FROM --platform=$TARGETOS/$TARGETARCH node:17-bullseye-slim
 
 LABEL author="andhra21231" maintainer="support@pelajar.social"
 
-RUN apt update && apt upgrade -y
-RUN apt -y install ffmpeg iproute2 git sqlite3 libsqlite3-dev python3 python3-dev ca-certificates dnsutils tzdata zip tar curl build-essential libtool
-RUN npm -g install npm@latest
+RUN apt update && apt upgrade -y \
+apt -y install ffmpeg iproute2 git sqlite3 libsqlite3-dev python3 python3-dev ca-certificates dnsutils tzdata zip tar curl build-essential libtool \
+npm -g install npm@latest \
+useradd -m -d /home/container container
 
-RUN useradd -m -d /home/container container
 
 USER container
 ENV USER=container WORKDIR=/home/container
